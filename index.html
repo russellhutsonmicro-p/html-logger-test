@@ -1,0 +1,25 @@
+<html>
+<head>
+	<script type="text/javascript" src="js/loggly-jslogger/src/loggly.tracker.js" async></script>
+<script>
+  var _LTracker = _LTracker || [];
+  _LTracker.push({
+  	//'logglyCollectorDomain' : 'localhost:3000/api/v1/logentries',
+    'logglyKey': 'TOKEN',
+    'sendConsoleErrors' : true,
+    //'tag' : 'loggly-jslogger' 
+  });
+
+
+  function send() {
+  	console.log('sending');
+  	_LTracker.push({'request':'val1', 'content':'val2'});
+  }
+</script>
+</head>
+<body>
+
+<button onclick="send()">Send</button>
+	
+</body>
+</html>
