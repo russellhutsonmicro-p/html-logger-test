@@ -13,7 +13,8 @@
 
   function send() {
   	console.log('sending');
-  	_LTracker.push({'request':'val1', 'content':'val2'});
+  	_LTracker.push("button pressed");
+    _LTracker.push({action:"pressed", otherdata: {fld1: 1, fld2: 2}});
   }
 </script>
 </head>
